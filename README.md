@@ -12,7 +12,7 @@ n = num of operations // time and space complexity based on growth
 ------
 `base case` - the condition under which the recursion stops, preventing infinite recursion; thus terminating; typically empty or one element  
 `pivot` - an element used as a reference point to partition a data set into two separate groups   
-`recursion` - keeps track of state
+`recursion` - keeps track of state    
 `inductive proof` - used to establish the truth of an infinite number of cases; commonly used to analyze recursive algorithms.      
 
 ------
@@ -46,16 +46,11 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 | **Retrieval**      | \(O(1)\)     | \(O(n)\)    | Worst case happens if all keys collide and the key is at the end of a chained list or the element isn't present. |
 | **Resizing**       | \(O(n)\)     | \(O(n)\)    | This operation is infrequent if resizing is done efficiently. |
 
-
-
-------
-# Dikstra's Algorithmn
-
 ------
 # Graphs
 `node` - a node represents a point or a vertex, can hold data and may also have references to other nodes.    
-`edge` - connection between two nodes in a graph; in a weighted graph, an edge will also have a weight or cost associated with it, indicating the "cost" of traversing that edge.
-`neighbors` - nodes that are directly connected to it by an edge. If two nodes are connected by an edge, they are said to be adjacent or neighbors; if there's an edge between nodes A and B, then A is a neighbor of B and vice versa.
+`edge` - connection between two nodes in a graph; in a weighted graph, an edge will also have a weight or cost associated with it, indicating the "cost" of traversing that edge.    
+`neighbors` - nodes that are directly connected to it by an edge. If two nodes are connected by an edge, they are said to be adjacent or neighbors; if there's an edge between nodes A and B, then A is a neighbor of B and vice versa.    
 
 `directed graph` - each edge has a starting point and an ending point. Edges are represented by arrows pointing from the starting vertex to the ending vertex; the order of the vertices matters; the edge (A, B) is different from the edge (B, A).   
 
@@ -63,7 +58,19 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 
 O(V+E) 
  - V = vertices
- - e = num of edges 
+ - e = num of edges
+
+
+------
+# Dikstra's Algorithmn
+Shortest path from a given source vertex to every other vertex in a `weighted graph`   
+
+- no negative weight edges
+- either directed or undirected
+
+------
+# Bellman-Ford algorithm
+Shortest path from a given source vertex to every other vertex in a weighted graph, including those with `negative weight edges`   
 
 ------
 # BFS (Breadth-First Search) and DFS (Depth-First Search) 
