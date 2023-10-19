@@ -14,6 +14,16 @@ n = num of operations // time and space complexity based on growth
 `pivot` - an element used as a reference point to partition a data set into two separate groups   
 `recursion` - keeps track of state    
 `inductive proof` - used to establish the truth of an infinite number of cases; commonly used to analyze recursive algorithms.      
+`NP-completeness` - no known fast solution, rather optimal (greedy algo) or `approximation algo` usually suffices   
+ - how fast
+ - how close to optimal
+ - sometimes perfect in the enemy of good
+
+`sets` - can't have duplicates - keep track of distinct items without caring about their order or frequency.
+  - set intersection
+  - set union
+  - set difference
+  - set covering
 
 ------
 # Linked lists vs. Arrays
@@ -67,6 +77,12 @@ Shortest path from a given source vertex to every other vertex in a `weighted gr
 
 - no negative weight edges
 - either directed or undirected
+- no cycles or circular paths (cycle: start at node and end at same node)
+
+  1. Cheapest node
+  2. Update the cost of neighbors
+  3. Repeat
+  4. Calculate
 
 ------
 # Bellman-Ford algorithm
@@ -81,4 +97,13 @@ Shortest path from a given source vertex to every other vertex in a weighted gra
 ------
 # Kadane’s Algorithmn
 
+------
+# Knapsack Problem
+`Problem:`    
+You're a thief breaking into a house. You have a knapsack and there are several items in the house you can steal. Each item has a weight and a value (how much it's worth). However, your knapsack can only carry up to a certain weight before it breaks.
+
+`Question:`   
+What's the most valuable combination of items you can take without exceeding the weight limit of your knapsack?    
+
+The knapsack problem is NP-hard for its 0/1 variant, meaning as the number of items grows, the time it takes to find the exact solution can grow very quickly.   
 
