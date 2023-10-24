@@ -66,10 +66,7 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 
 `topological Sorting` - a way to arrange the vertices of a graph in a straight line so that all directed edges go from left to right.
 
-O(V+E) 
- - V = vertices
- - e = num of edges
-
+O(V+E) - v = vertices and e = num of edges
 
 ------
 # Dikstra's Algorithmn
@@ -83,6 +80,18 @@ Shortest path from a given source vertex to every other vertex in a `weighted gr
   2. Update the cost of neighbors
   3. Repeat
   4. Calculate
+ 
+------
+# K-Nearest Neighbors (K-NN)
+A supervised machine learning algorithm used for classification and regression tasks. It's a simple, non-parametric algorithm that makes predictions based on the similarity of data points in a feature space. K-NN can be used for both classification and regression tasks, but it's most commonly associated with classification.   
+1. Regression
+2. Classification
+
+- Co-sign similarity
+- `OCR` optical character recognition
+- Naive Bayes Classifier
+- Computationally expensive for large datasets because it requires calculating distances for all data points.
+- If `n` users look at `sqrt(n)` neighbors: ie Netflix 
 
 ------
 # Bellman-Ford algorithm
