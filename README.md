@@ -25,6 +25,18 @@ n = num of operations // time and space complexity based on growth
   - set difference
   - set covering
 
+`dynamic programming` - breaking down a complex problem into simpler subproblems and solving each subproblem only once, storing the results for future reference; works when each sub problem is discrete
+
+`The Fourier transform` - represents data in terms of its frequency components: music, DNA, JPegs...
+
+`Parallel Algorithms`
+  - MapReduce distributed algorithm
+  - Apache Hadoop
+
+Simhash "similarity hash" - locality sensative hash, a hash which is similar in output: Google uses a simhash for duplicates in web crawling.
+
+BCrypt hash - designed to be slow and computationally intensive, which makes it resistant to brute-force and rainbow table attacks
+
 ------
 # Linked lists vs. Arrays
 Difference is mostly in read and insertion times   
@@ -39,6 +51,23 @@ Linked List
 - non-contiguous
 - O(n) reading elements
 - O(1) for insertion/deletion
+
+
+------
+# Queue
+First-In-First-Out (FIFO) principle
+- **Enqueue (Insertion)**: Adds an element to the back of the queue.
+  - Time Complexity: \(O(1)\) - Constant time.
+  
+- **Dequeue (Removal)**: Removes an element from the front of the queue.
+  - Time Complexity: \(O(1)\) - Constant time.
+
+- **Peek**: Views the front item without removing it.
+  - Time Complexity: \(O(1)\) - Constant time.
+
+- **Is Empty**: Checks if the queue is empty.
+  - Time Complexity: \(O(1)\) - Constant time.
+
 
 ------
 # Hash Table
@@ -91,7 +120,9 @@ A supervised machine learning algorithm used for classification and regression t
 - `OCR` optical character recognition
 - Naive Bayes Classifier
 - Computationally expensive for large datasets because it requires calculating distances for all data points.
-- If `n` users look at `sqrt(n)` neighbors: ie Netflix 
+- if `n` users look at `sqrt(n)` neighbors: ie Netflix 
+- feature extraction
+  
 
 ------
 # Bellman-Ford algorithm
@@ -99,12 +130,42 @@ Shortest path from a given source vertex to every other vertex in a weighted gra
 
 ------
 # BFS (Breadth-First Search) and DFS (Depth-First Search) 
+BFS is a graph traversal algorithm.
 
 ------
-# Red Black Tree 
+# DFS (Depth-First Search)
+
+------
+# Trees 
+
+### Red Black Tree
+
+### Heaps
+A specialized tree used for priority queue operations.
+
+
+### Splay Trees
+A self-balancing binary search tree.
+
+
+
+------
+# Bloom Filters
+Probablistc data structures - not an exact answer, but probably correct   
+
+
+### HyperLogLog
+
+------
+# Backtracking
+
 
 ------
 # Kadane’s Algorithmn
+To find the maximum sum of a contiguous subarray.
+
+------
+# Knapsack Problem
 
 ------
 # Knapsack Problem
