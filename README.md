@@ -1,13 +1,19 @@
 # Data-Structures-and-Algorithms
 
 ## Common Big-O run times
+[Big-O Cheatsheet](https://www.bigocheatsheet.com/)    
 n = num of operations // time and space complexity based on growth   
 - `O(1)` - constant time
-- `O(n)` - linear time
-- `O(log n)` - log time
+- `O(log n)` - log time (divide and conquer)
+- `O(n)` - linear time (proportional)
 - `O(n * log n)` - eg quicksort
-- `O(n2)` - eg selection sort
+- `O(n2)` - eg selection sort (think of a loop within a loop)
 - `O(n!)` - n factorial eg traveling salesperson
+
+Simplification: drop non dominants and constants   
+Different terms for inputs    
+`Theta:` tight bound avg   
+`Omega:` lower bound best    
 
 ------
 `base case` - the condition under which the recursion stops, preventing infinite recursion; thus terminating; typically empty or one element  
@@ -52,6 +58,24 @@ Linked List
 - O(n) reading elements
 - O(1) for insertion/deletion
 
+-----
+
+### `std::vector` in C++
+
+- A dynamic array automatically resizing as elements are added or removed.
+  - **Access**: \(O(1)\) average time.
+  - **Insertion at end (push_back)**: Amortized \(O(1)\).
+  - **Insertion not at the end**: \(O(n)\) because of re-indexing
+  - **Deletion at end (pop_back)**: \(O(1)\).
+  - **Deletion not at end**: \(O(n)\).
+  - **Searching (if not sorted)**: \(O(n)\).
+
+- **Memory**:
+  - Uses contiguous memory, enhancing cache performance.
+  - Size can exceed the number of elements due to reserved capacity.
+- **Advantages over linked lists**:
+  - Cache-friendly due to contiguous memory.
+  - Generally more space efficient as there are no node pointers as in linked lists.
 
 ------
 # Queue
@@ -164,9 +188,14 @@ Probablistc data structures - not an exact answer, but probably correct
 # Kadane’s Algorithmn
 To find the maximum sum of a contiguous subarray.
 
-------
-# Knapsack Problem
 
+------
+# Kadane’s Algorithmn
+
+------
+# Parallel Algorithmn's
+C++17/20 
+  - std::execution par
 ------
 # Knapsack Problem
 `Problem:`    
