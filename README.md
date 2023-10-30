@@ -8,7 +8,7 @@ n = num of operations // time and space complexity based on growth
 - `O(n)` - linear time (proportional)
 - `O(n * log n)` - eg quicksort
 - `O(n2)` - eg selection sort (think of a loop within a loop)
-- `O(n!)` - n factorial eg traveling salesperson
+- `O(n!)` - n factorial eg `traveling salesperson`
 
 Simplification: drop non dominants and constants   
 Different terms for inputs    
@@ -16,6 +16,7 @@ Different terms for inputs
 `Omega:` lower bound best    
 
 ------
+### Some Terms
 `base case` - the condition under which the recursion stops, preventing infinite recursion; thus terminating; typically empty or one element  
 `pivot` - an element used as a reference point to partition a data set into two separate groups   
 `recursion` - keeps track of state    
@@ -55,12 +56,17 @@ Array
 
 Linked List
 - non-contiguous
-- O(n) reading elements
+- O(n) reading elements (iterating over indexes)
 - O(1) for insertion/deletion
+- head // tail // node = value and next // similar to a set of unordered maps
+ 
+Singly Linked List
+
+Doubly Linked List
 
 -----
 
-### `std::vector` in C++
+#### `std::vector` in C++
 
 - A dynamic array automatically resizing as elements are added or removed.
   - **Access**: \(O(1)\) average time.
@@ -71,7 +77,7 @@ Linked List
   - **Searching (if not sorted)**: \(O(n)\).
 
 - **Memory**:
-  - Uses contiguous memory, enhancing cache performance.
+  - Uses `contiguous` memory, enhancing cache performance.
   - Size can exceed the number of elements due to reserved capacity.
 - **Advantages over linked lists**:
   - Cache-friendly due to contiguous memory.
@@ -120,6 +126,11 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 `topological Sorting` - a way to arrange the vertices of a graph in a straight line so that all directed edges go from left to right.
 
 O(V+E) - v = vertices and e = num of edges
+
+
+------
+# Sliding Window
+
 
 ------
 # Dikstra's Algorithmn
@@ -183,6 +194,9 @@ Probablistc data structures - not an exact answer, but probably correct
 ------
 # Backtracking
 
+------
+# Sliding Window
+
 
 ------
 # Kadane’s Algorithmn
@@ -190,12 +204,11 @@ To find the maximum sum of a contiguous subarray.
 
 
 ------
-# Kadane’s Algorithmn
-
-------
-# Parallel Algorithmn's
+# Parallel Algorithmns
 C++17/20 
   - std::execution par
+
+
 ------
 # Knapsack Problem
 `Problem:`    
