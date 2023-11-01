@@ -61,6 +61,9 @@ Linked List
 - head // tail // node = value and next // similar to a set of unordered maps
  
 Singly Linked List
+- Solve with two pointers `fast` and `slow` each iterating over the list
+- Floyd's cycle-finding algorithm (also known as the "tortoise and the hare" algorithm)
+
 
 Doubly Linked List
 
@@ -103,6 +106,7 @@ First-In-First-Out (FIFO) principle
 # Hash Table
 AKA: Hash map, dictionary, Associative array, map, depending...   
 - key value pair
+- `unordered`
 - `load factor` - determines how full the hash table is; When the load factor reaches a certain threshold (a value typically between `0.7` and `1.0`, though this can vary depending on the implementation), the hash table may be resized (usually doubled) to maintain efficient average-case time complexity for operations like insertions, deletions, and retrievals. This resizing process often involves rehashing all the current entries.   
 - fast search, insert, delete
 - modeling relationships
@@ -126,6 +130,10 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 `topological Sorting` - a way to arrange the vertices of a graph in a straight line so that all directed edges go from left to right.
 
 O(V+E) - v = vertices and e = num of edges
+
+------
+# Recursion
+
 
 
 ------
