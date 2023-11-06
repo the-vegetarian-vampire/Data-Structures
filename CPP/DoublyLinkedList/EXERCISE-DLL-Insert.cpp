@@ -188,39 +188,82 @@ public:
         }
         return false;
     }
+
+    bool insert(int index, int value)
+    {
+        if (index < 0 || index > length)
+            return false;
+        if (index == 0)
+        {
+            prepend(value);
+            return true;
+        }
+        if (index == length)
+        {
+            append(value);
+            return true;
+        }
+
+        Node *newNode = new Node(value);
+        Node *before = get(index - 1);
+        Node *after = before->next;
+        newNode->prev = before;
+        newNode->next = after;
+        before->next = newNode;
+        after->prev = newNode;
+        length++;
+        return true;
+    }
 };
 
 int main()
 {
 
-    DoublyLinkedList *myDLL = new DoublyLinkedList(0);
-    myDLL->append(1);
-    myDLL->append(2);
+    DoublyLinkedList *myDLL = new DoublyLinkedList(1);
     myDLL->append(3);
 
-    cout << "DLL before set():" << endl;
+    cout << "DLL before insert():" << endl;
     myDLL->printList();
 
-    myDLL->set(2, 99);
+    myDLL->insert(1, 2);
 
-    cout << endl
-         << "LL after set():" << endl;
+    cout << "\nDLL after insert(2) in middle:\n";
+    myDLL->printList();
+
+    myDLL->insert(0, 0);
+
+    cout << "\nDLL after insert(0) at beginning:\n";
+    myDLL->printList();
+
+    myDLL->insert(4, 4);
+
+    cout << "\nDLL after insert(4) at end:\n";
     myDLL->printList();
 
     /*
         EXPECTED OUTPUT:
         ----------------
-        LL before set():
+        DLL before insert():
+        1
+        3
+
+        DLL after insert(2) in middle:
+        1
+        2
+        3
+
+        DLL after insert(0) at beginning:
         0
         1
         2
         3
 
-        LL after set():
+        DLL after insert(4) at end:
         0
         1
-        99
+        2
         3
+        4
 
     */
 }

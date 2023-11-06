@@ -188,39 +188,97 @@ public:
         }
         return false;
     }
+
+    bool insert(int index, int value)
+    {
+        if (index < 0 || index > length)
+            return false;
+        if (index == 0)
+        {
+            prepend(value);
+            return true;
+        }
+        if (index == length)
+        {
+            append(value);
+            return true;
+        }
+
+        Node *newNode = new Node(value);
+        Node *before = get(index - 1);
+        Node *after = before->next;
+        newNode->prev = before;
+        newNode->next = after;
+        before->next = newNode;
+        after->prev = newNode;
+        length++;
+        return true;
+    }
+
+    void deleteNode(int index)
+    {
+        if (index < 0 || index >= length)
+            return;
+        if (index == 0)
+            return deleteFirst();
+        if (index == length - 1)
+            return deleteLast();
+        Node *temp = get(index);
+        temp->next->prev = temp->prev;
+        temp->prev->next = temp->next;
+        delete temp;
+        length--;
+    }
 };
 
 int main()
 {
 
-    DoublyLinkedList *myDLL = new DoublyLinkedList(0);
-    myDLL->append(1);
+    DoublyLinkedList *myDLL = new DoublyLinkedList(1);
     myDLL->append(2);
     myDLL->append(3);
+    myDLL->append(4);
+    myDLL->append(5);
 
-    cout << "DLL before set():" << endl;
+    cout << "DLL before deleteNode():\n";
     myDLL->printList();
 
-    myDLL->set(2, 99);
+    myDLL->deleteNode(2);
+    cout << "\nDLL after deleteNode() in middle:\n";
+    myDLL->printList();
 
-    cout << endl
-         << "LL after set():" << endl;
+    myDLL->deleteNode(0);
+    cout << "\nDLL after deleteNode() of first node:\n";
+    myDLL->printList();
+
+    myDLL->deleteNode(2);
+    cout << "\nDLL after deleteNode() of last node:\n";
     myDLL->printList();
 
     /*
         EXPECTED OUTPUT:
         ----------------
-        LL before set():
-        0
+        DLL before deleteNode():
         1
         2
         3
+        4
+        5
 
-        LL after set():
-        0
+        DLL after deleteNode() in middle:
         1
-        99
-        3
+        2
+        4
+        5
+
+        DLL after deleteNode() of first node:
+        2
+        4
+        5
+
+        DLL after deleteNode() of last node:
+        2
+        4
 
     */
 }
