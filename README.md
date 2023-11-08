@@ -299,7 +299,7 @@ Hierarchical data structures composed of nodes connected by edges.
 
 ### Binary Search Tree
 
-O(log n)
+- typically O(log n)
 
 ### Red Black Tree
 
