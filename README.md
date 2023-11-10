@@ -166,6 +166,7 @@ First-In-First-Out (FIFO) principle
 
 AKA: Hash map, dictionary, Associative array, map, depending...
 
+- `std::map` and `std::unordered_map`
 - key value pair
 - `unordered`
 - `load factor` - determines how full the hash table is; When the load factor reaches a certain threshold (a value typically between `0.7` and `1.0`, though this can vary depending on the implementation), the hash table may be resized (usually doubled) to maintain efficient average-case time complexity for operations like insertions, deletions, and retrievals. This resizing process often involves rehashing all the current entries.
@@ -353,6 +354,45 @@ What's the most valuable combination of items you can take without exceeding the
 
 The knapsack problem is NP-hard for its 0/1 variant, meaning as the number of items grows, the time it takes to find the exact solution can grow very quickly.
 
-```
+### Knapsack Problem Unbound
 
-```
+---
+
+# Prim's Algorithm
+
+Greedy algorithm that finds a minimum spanning tree for a weighted undirected graph; it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized.
+
+## How it works
+
+1. Start with any `single vertex` and consider it as the spanning tree.
+2. Find minimum weight edge that connects a vertex in the tree to a vertex outside the tree.
+3. Add this edge to the tree.
+4. Repeat step 2 and 3 until all vertices are included in the tree.
+
+## Properties
+
+- **Greedy Algorithm:** It chooses the nearest available vertex not already included in the tree.
+- **Complexity:** The time complexity can range from O(V^2) to O(E + log V) depending on the data structures used (V is the number of vertices, E is the number of edges).
+- **Suitability:** Prim's algorithm is good for dense graphs where E is close to V^2.
+
+Ensures edges chosen are optimized to produce the minimum spanning tree and it can handle graphs with negative edge weights as well.
+
+---
+
+# Kruskal's Algorithm
+
+Greedy algorithm used to find the minimum spanning tree for a connected weighted graph. The minimum spanning tree is a subset of the graph's edges that connects all vertices together, without any cycles and with the minimum possible total edge weight.
+
+## How it works
+
+1. Sort all the edges from low weight to high.
+2. Take the edge with the lowest weight and add it to the spanning tree. If adding the edge creates a cycle, then reject this edge.
+3. Keep adding edges until all vertices are bridged.
+
+## Properties
+
+- **Greedy Algorithm:** It selects the smallest available edge to ensure the minimum total weight.
+- **Complexity:** When using a disjoint-set data structure, the algorithm has a time complexity of O(E log E) or O(E log V), where E is the number of edges and V is the number of vertices.
+- **Suitability:** Kruskal's algorithm is more suitable for sparse graphs where E is much less than V^2.
+
+Can be applied to any connected weighted graph and guarantees to find the minimum spanning tree if the graph is connected and undirected.
