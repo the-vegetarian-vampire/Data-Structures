@@ -260,7 +260,7 @@ Hierarchical data structures composed of nodes connected by edges.
 - **Child**: A node directly connected to another node when moving away from the Root.
 - **Parent**: The converse notion of a child.
 - **Siblings**: Nodes that share the same parent.
-- **Leaf**: A node that does not have any children.
+- **Leaf**: A node without children.
 - **Subtree**: A tree entirely contained within another tree.
 
 ## Properties
@@ -301,6 +301,8 @@ Hierarchical data structures composed of nodes connected by edges.
 ### Binary Search Tree
 
 - typically O(log n)
+- have a `temp` variable traverse the tree
+- `while loop` since not sure how long it will run
 
 ### Red Black Tree
 
