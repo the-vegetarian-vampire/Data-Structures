@@ -179,7 +179,19 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 | **Insertion** | \(O(1)\)     | \(O(n)\)   | Worst case arises if all keys collide into the same bucket. With an optimal hash function and resizing strategy, this is infrequent. |
 | **Deletion**  | \(O(1)\)     | \(O(n)\)   | Similar reasoning as insertion.                                                                                                      |
 | **Retrieval** | \(O(1)\)     | \(O(n)\)   | Worst case happens if all keys collide and the key is at the end of a chained list or the element isn't present.                     |
-| **Resizing**  | \(O(n)\)     | \(O(n)\)   | This operation is infrequent if resizing is done efficiently.                                                                        |
+| **Resizing**  | \(O(n)\)     | \(O(n)\)   | This operation is infrequent if resizing is done efficiently.   
+
+### Collision Handling Methods
+
+#### Separate Chaining
+- **Concept**: Stores colliding elements in a linked list at the same index.
+- **Advantages**: Efficient collision handling, less sensitivity to load factors, good performance even with high load factors.
+- **Disadvantages**: Requires extra memory, worst-case time complexity can degrade to \(O(n)\).
+
+#### Linear Probing
+- **Concept**: Uses open addressing and probes sequentially for the next available slot after a collision.
+- **Advantages**: Simple implementation, all data stored in the hash table itself.
+- **Disadvantages**: Prone to clustering, performance degrades when the table is nearly full.|
 
 ---
 
