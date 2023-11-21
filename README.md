@@ -165,7 +165,7 @@ First-In-First-Out (FIFO) principle
 
 # Hash Table
 
-AKA: Hash map, dictionary, Associative array, map, depending...
+AKA: Hash map, dictionary, associative array, map, depending...
 
 - `std::map` and `std::unordered_map`
 - key value pair
@@ -198,15 +198,17 @@ AKA: Hash map, dictionary, Associative array, map, depending...
 
 # Graphs
 
-`node` - a node represents a point or a vertex, can hold data and may also have references to other nodes.
-`edge` - connection between two nodes in a graph; in a weighted graph, an edge will also have a weight or cost associated with it, indicating the "cost" of traversing that edge.
-`neighbors` - nodes that are directly connected to it by an edge. If two nodes are connected by an edge, they are said to be adjacent or neighbors; if there's an edge between nodes A and B, then A is a neighbor of B and vice versa.
-
+`node` - a node represents a point or a vertex, can hold data and may also have references to other nodes.    
+`edge` - connection between two nodes in a graph; in a weighted graph, an edge will also have a weight or cost associated with it, indicating the "cost" of traversing that edge.    
+`neighbors` - nodes that are directly connected to it by an edge. If two nodes are connected by an edge, they are said to be adjacent or neighbors; if there's an edge between nodes A and B, then A is a neighbor of B and vice versa.    
 `directed graph` - each edge has a starting point and an ending point. Edges are represented by arrows pointing from the starting vertex to the ending vertex; the order of the vertices matters; the edge (A, B) is different from the edge (B, A).
 
-`topological Sorting` - a way to arrange the vertices of a graph in a straight line so that all directed edges go from left to right.
+`topological Sorting` - a way to arrange the vertices of a graph in a straight line so that all directed edges go from left to right.    
+O(V+E) - v = vertices and e = num of edges    
 
-O(V+E) - v = vertices and e = num of edges
+- `std::unordered_set ` -  no duplicates
+
+- Adjacency matrix
 
 ---
 
