@@ -142,8 +142,9 @@ int main() {
 ---
 
 # Queue
-
 First-In-First-Out (FIFO) principle
+- `std::queue<Type> queueName` 
+- `std::deque<Type> dequeName`
 
 - **Enqueue (Insertion)**: Adds an element to the back of the queue.
 
@@ -257,10 +258,13 @@ Shortest path from a given source vertex to every other vertex in a weighted gra
 # BFS (Breadth-First Search) and DFS (Depth-First Search)
 
 BFS is a graph traversal algorithm.
+- aka `Level Order Traversal`
+- starts at the root (or an arbitrary node in a graph) and explores all neighboring nodes at the present depth before moving to the nodes at the next depth level.
 
 ---
 
 # DFS (Depth-First Search)
+- Explores as far as possible along each branch before backtracking; starts at the root (or an arbitrary node) and explores as far as possible along each branch before backtracking.
 
 ---
 
