@@ -209,10 +209,33 @@ O(V+E) - v = vertices and e = num of edges
 - `std::unordered_set ` -  no duplicates
 
 - Adjacency matrix
+  - Adding a Vertex in a Graph with an Adjacency List is O(1):
+
+
+
+
 
 ---
 
 # Recursion
+
+## Overview
+Recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem.
+
+## Applications
+- **Trees**: Inherently recursive, as each tree is made up of smaller trees (subtrees).
+- **Graphs**: Recursive algorithms for traversing or searching, like Depth-First Search (DFS).
+- **Sorting Algorithms**: Such as Quick Sort and Merge Sort, which divide the array into smaller parts recursively.
+
+## Advantages
+- Simplifies code for complex data structures.
+- Natural fit for operations on structures like trees and graphs.
+
+## Considerations
+- Requires careful handling to avoid infinite recursion.
+- May be less efficient in terms of memory due to stack usage.
+
+- STACK OVERFLOW
 
 ---
 
