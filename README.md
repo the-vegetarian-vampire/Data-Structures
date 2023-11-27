@@ -239,10 +239,6 @@ Recursion is a method where the solution to a problem depends on solutions to sm
 
 ---
 
-# Sliding Window
-
----
-
 # Dikstra's Algorithmn
 
 Shortest path from a given source vertex to every other vertex in a `weighted graph`
@@ -370,6 +366,21 @@ Probablistc data structures - not an exact answer, but probably correct
 ---
 
 # Sliding Window
+Approach used for solving problems that require checking or computing something among all subarrays of a specific size in an array or list. It's especially efficient for problems involving contiguous sequences with a particular property, such as maximum sum, minimum length, or a certain number of zeroes.
+
+## Key Concepts
+- **Two Pointers**: This method often involves two pointers to denote the beginning and end of the window, which can vary in size or move in unison, depending on the problem.
+- **Dynamic Window Size**: The window's size can expand or contract based on the problem's requirements.
+- **Time Complexity**: Typically offers an efficient solution, usually with a time complexity of O(n), where n is the length of the array or list.
+
+## Applications
+- Finding the longest substring without repeating characters.
+- Computing the maximum sum subarray of a specified size.
+- Identifying the smallest subarray with a given sum.
+
+## Example
+Consider an array where you need to find the maximum sum of any contiguous subarray of a fixed size. Using the Sliding Window technique, you can efficiently solve this by sliding the window across the array and recalculating the sum—subtracting the element being left behind and adding the new element entering the window.
+
 
 ---
 
