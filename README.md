@@ -343,6 +343,36 @@ Hierarchical data structures composed of nodes connected by edges.
 
 ### Red Black Tree
 
+A type of self-balancing binary search tree; ensures the tree remains balanced after insertions and deletions, leading to more consistent operation times.
+
+- Each node is either red or black.
+- The root and leaves (NIL nodes) are black.
+- Red nodes can't have red children (No two consecutive red nodes).
+- Every path from a node to its descendant NIL nodes contains the same number of black nodes.
+
+
+1. **Insert the node like a regular BST insertion**.
+2. **Color the new node red**.
+3. **Fix the tree to maintain Red-Black properties**:
+   - If the parent node is black, no further action is required.
+   - If the parent node is red, perform rotations and recoloring.
+
+4. **Remove the node using BST deletion rules**.
+5. **Fix the tree to maintain Red-Black properties**:
+   - If the deleted node's child is red, simply replace the deleted node with its child and recolor it black.
+   - If the deleted node's child is black, complex cases involving rotations and recoloring are handled.
+
+
+- Similar to BST search, O(log n) time complexity.
+  
+- **Left Rotation**: Pivot on a node to move it down to the left.
+- **Right Rotation**: Pivot on a node to move it down to the right.
+- Rotations are used to maintain tree balance during insertions and deletions.
+
+
+- **Time Complexity**: O(log n) for insertions, deletions, and search operations.
+
+
 ### Heaps
 
 A specialized tree used for priority queue operations.
@@ -362,6 +392,35 @@ Probablistc data structures - not an exact answer, but probably correct
 ---
 
 # Backtracking
+- **Backtracking** is a recursive, systematic algorithmic technique for solving problems.
+- It incrementally builds candidates to the solutions and abandons a candidate ("backtracks") as soon as it determines the candidate cannot possibly be completed to a valid solution.
+
+## Key Principles
+1. **Choice**: Choose a candidate or option to add to the current solution.
+2. **Constraints**: Check if the current candidate violates any constraints. If it does, abandon it.
+3. **Goal**: Check if the current candidate satisfies the goal of the problem.
+
+## Common Use Cases
+- **Solving Puzzles**: Such as Sudoku, Crossword puzzles, N-Queens problem.
+- **Searching**: Finding all possible configurations, such as permutations of a set.
+- **Optimization Problems**: Finding the best solution among all feasible solutions, like in the Traveling Salesman Problem.
+
+## Example: N-Queens Problem
+- **Problem**: Place N queens on an N×N chessboard so that no two queens threaten each other.
+- **Approach**: Place a queen in a row and recurse to solve for the next row. Backtrack if a conflict is found.
+
+## Advantages
+- **Efficiency**: More efficient than naive brute-force approaches, especially when the number of possibilities is large.
+- **Flexibility**: Can be applied to many types of problems where exhaustive search is needed.
+
+## Disadvantages
+- **Time Consumption**: Can still be slow for problems with large search spaces.
+- **Complexity**: Implementing backtracking can be complex, especially for beginners.
+
+## Implementation Tips
+- Recursion is often a natural way to implement backtracking.
+- Use data structures that facilitate adding and removing elements, like stacks.
+- Pruning: Eliminate choices early that clearly lead to a dead end.
 
 ---
 
