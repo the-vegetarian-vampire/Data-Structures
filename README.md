@@ -509,3 +509,10 @@ Greedy algorithm used to find the minimum spanning tree for a connected weighted
 - **Suitability:** Kruskal's algorithm is more suitable for sparse graphs where E is much less than V^2.
 
 Can be applied to any connected weighted graph and guarantees to find the minimum spanning tree if the graph is connected and undirected.
+
+---
+# Dynamic Programming
+
+Top-Down Approach (Memoization): This approach involves writing the recursive solution first and then storing the results of the subproblems in a table (usually an array or a hash map) to avoid computing the same results multiple times. This is also known as memoization.
+
+Bottom-Up Approach (Tabulation): In this approach, the solution is built starting with the simplest subproblems. By solving larger and larger subproblems using the results of previously solved subproblems, the final solution to the original problem is eventually reached. This approach typically involves filling up a table (array), and it is iterative.
