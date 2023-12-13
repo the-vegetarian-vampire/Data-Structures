@@ -516,3 +516,9 @@ Can be applied to any connected weighted graph and guarantees to find the minimu
 Top-Down Approach (Memoization): This approach involves writing the recursive solution first and then storing the results of the subproblems in a table (usually an array or a hash map) to avoid computing the same results multiple times. This is also known as memoization.
 
 Bottom-Up Approach (Tabulation): In this approach, the solution is built starting with the simplest subproblems. By solving larger and larger subproblems using the results of previously solved subproblems, the final solution to the original problem is eventually reached. This approach typically involves filling up a table (array), and it is iterative.
+
+---------
+# C++ in Action
+
+- `.size()` - used with containers like std::vector, std::list, etc. to get the number of elements.
+- `.length()` - used specifically with std::string to get the number of characters in the string. Identical in functionality to .size() when used with strings.
