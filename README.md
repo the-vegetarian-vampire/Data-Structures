@@ -308,7 +308,7 @@ Hierarchical data structures composed of nodes connected by edges.
 - **Complete Tree**: every level, except possibly the last, is completely filled, and all nodes are as far left as possible. (full from left to right with no gaps)
 - **Perfect Tree**: all interior nodes have exactly the same number of children, and all leaves are at the same level.
 
-## Common Types of Trees
+## Common Types
 
 - **Binary Tree**: A tree where each node has at most two children.
 - **Binary Search Tree (BST)**: A binary tree where the left child contains only nodes with values less than the parent node, and the right child only nodes with values greater than the parent node.
@@ -332,6 +332,8 @@ Hierarchical data structures composed of nodes connected by edges.
 - Representing hierarchical data, such as file systems or organizational structures.
 - Making efficient search operations, like in binary search trees.
 - Priority Queues implemented as Heaps.
+
+B-trees are optimized for systems that read and write large blocks of data. They are widely used in databases and file systems because they provide efficient insertion, deletion, and searching operations, even in large data sets.
 
 ---
 
@@ -522,3 +524,5 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
 
 - `.size()` - used with containers like std::vector, std::list, etc. to get the number of elements.
 - `.length()` - used specifically with std::string to get the number of characters in the string. Identical in functionality to .size() when used with strings.
+- `unordered_set` - each element only once; duplicate elements, will be ignored.
+
