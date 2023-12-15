@@ -523,6 +523,9 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
 # C++ in Action
 
 - `.size()` - used with containers like std::vector, std::list, etc. to get the number of elements.
-- `.length()` - used specifically with std::string to get the number of characters in the string. Identical in functionality to .size() when used with strings.
+- `.length()` - used specifically with std::string to get the number of characters in the string. Identical in functionality to .size() when used with strings.    
+
+- `.empty()` - returns boolean to check if the container is empty; usually for a stack in coordination with .top() or .pop()    
+
 - `unordered_set` - each element only once; duplicate elements, will be ignored.
 
