@@ -529,3 +529,29 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
 
 - `unordered_set` - each element only once; duplicate elements, will be ignored.
 
+- `max` (from `<algorithm>` header)
+  - Compares two values and returns the larger one. Syntax: `max(value1, value2)`.
+
+- `sort` (from `<algorithm>` header)
+  - Sorts the elements in a given range. Syntax: `sort(startIterator, endIterator)`.
+
+- `push_back()`
+  - Used with sequence containers like `std::vector` to add an element at the end.
+
+- `map`
+  - A collection of key-value pairs. Keys are unique, and each key maps to a single value.
+ 
+- `unordered_map`
+  - Hash table implementation of a map which allows for fast access and insertion of key-value pairs. Useful for frequency counting and mapping relationships.
+
+- `pair`
+  - Useful for returning two values from a function or storing two related values together. Accessed via `.first` and `.second`.
+
+- `algorithm functions`
+  - Includes `find()`, `reverse()`, `accumulate()`, `lower_bound()`, `upper_bound()`, and many more for common operations.
+
+- `bitset`
+
+- `queue`
+  - A first in, first out (FIFO) data structure. Elements are inserted at the back and removed from the front.
+
