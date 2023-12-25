@@ -549,6 +549,16 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
 
 - `bitset`
 
+- `std::stoi` - **Header**: `<string>`
+- **Function**: Converts a string to an integer.
+- **Usage**: `int num = std::stoi("123");`
+- **Exceptions**: Throws `std::invalid_argument` or `std::out_of_range`.
+
+- std::to_string` - **Header**: `<string>`
+- **Function**: Converts a numeric value to a string.
+- **Usage**: `std::string str = std::to_string(123);`
+- **Note**: Works with various numeric types (int, long, long long, float, double).
+
 
 --------
 # Resources
