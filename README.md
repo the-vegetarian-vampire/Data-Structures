@@ -520,20 +520,14 @@ Top-Down Approach (Memoization): This approach involves writing the recursive so
 Bottom-Up Approach (Tabulation): In this approach, the solution is built starting with the simplest subproblems. By solving larger and larger subproblems using the results of previously solved subproblems, the final solution to the original problem is eventually reached. This approach typically involves filling up a table (array), and it is iterative.
 
 ---------
-# C++ in Action
+# C++ STL Algorithmns in Action
 
 - `.size()` - used with containers like std::vector, std::list, etc. to get the number of elements.
-- `.length()` - used specifically with std::string to get the number of characters in the string. Identical in functionality to .size() when used with strings.    
+- `.length()` - used specifically with `std::string` to get the number of characters in the string. Identical in functionality to .size() when used with strings.    
 
 - `.empty()` - returns boolean to check if the container is empty; usually for a stack in coordination with .top() or .pop()    
 
 - `unordered_set` - each element only once; duplicate elements, will be ignored.
-
-- `max` (from `<algorithm>` header)
-  - Compares two values and returns the larger one. Syntax: `max(value1, value2)`.
-
-- `sort` (from `<algorithm>` header)
-  - Sorts the elements in a given range. Syntax: `sort(startIterator, endIterator)`.
 
 - `push_back()`
   - Used with sequence containers like `std::vector` to add an element at the end.
@@ -548,10 +542,15 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
   - Useful for returning two values from a function or storing two related values together. Accessed via `.first` and `.second`.
 
 - `algorithm functions`
-  - Includes `find()`, `reverse()`, `accumulate()`, `lower_bound()`, `upper_bound()`, and many more for common operations.
+  - Includes `count`, `find()`, `reverse()`, `accumulate()`, `lower_bound()`, `upper_bound()`, and many more for common operations.
+      - int count = std::count(container.begin(), container.end(), element_to_count);
+      - `max` (from `<algorithm>` header) compares two values and returns the larger one. Syntax: `max(value1, value2)`.
+      - `sort` (from `<algorithm>` header) sorts the elements in a given range. Syntax: `sort(startIterator, endIterator)`.
 
 - `bitset`
 
-- `queue`
-  - A first in, first out (FIFO) data structure. Elements are inserted at the back and removed from the front.
 
+--------
+# Resources
+- [Don’t Just LeetCode; Follow the Coding Patterns Instead](https://levelup.gitconnected.com/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb)
+- [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
