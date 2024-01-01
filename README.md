@@ -511,6 +511,34 @@ Greedy algorithm used to find the minimum spanning tree for a connected weighted
 - **Suitability:** Kruskal's algorithm is more suitable for sparse graphs where E is much less than V^2.
 
 Can be applied to any connected weighted graph and guarantees to find the minimum spanning tree if the graph is connected and undirected.
+---
+# Topological Sort
+- algorithm applied to **Directed Acyclic Graphs (DAGs)**.
+- It linearly orders the vertices of the graph such that for every directed edge from vertex `u` to vertex `v`, `u` comes before `v` in the ordering.
+
+## Key Characteristics
+- **DAGs Only**: Topological sorting can only be performed on graphs that have no cycles, i.e., Directed Acyclic Graphs.
+- **Uniqueness**: The ordering of the nodes in a topological sort is not necessarily unique. A DAG can have more than one topological ordering.
+- **Use Cases**: Commonly used in scenarios like scheduling tasks, organizing dependencies (e.g., dependency resolution in build systems), and course scheduling.
+
+## Algorithm
+1. **Count In-Degrees**: For each vertex, count the number of incoming edges.
+2. **Initialize Queue**: Add all vertices with in-degree of 0 (i.e., no incoming edges) to a queue.
+3. **Process Vertices**: While the queue is not empty:
+    - Remove a vertex from the queue (denoting it has no remaining dependencies).
+    - Add this vertex to the topological ordering.
+    - Decrease the in-degree of all its neighbors. If a neighbor's in-degree becomes 0, add it to the queue.
+
+## Complexity
+- **Time Complexity**: O(V + E) where V is the number of vertices and E is the number of edges in the graph.
+- **Space Complexity**: O(V) due to storage needed for the in-degree map and the queue.
+
+## Example
+- Consider a project consisting of tasks A, B, C, D, E, and F, with dependencies such that A must be completed before B and D, B must be completed before C and E, and D must be completed before E and F. A topological sort of these tasks will provide an order in which to undertake them without violating any dependencies.
+
+## Important Notes
+- If the graph contains a cycle, then a topological sort is not possible, as there is no linear ordering that satisfies all dependency requirements.
+- There are multiple methods to perform topological sorting, such as Depth-First Search (DFS) based approaches.
 
 ---
 # Dynamic Programming
@@ -524,22 +552,12 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
 
 - `.size()` - used with containers like std::vector, std::list, etc. to get the number of elements.
 - `.length()` - used specifically with `std::string` to get the number of characters in the string. Identical in functionality to .size() when used with strings.    
-
 - `.empty()` - returns boolean to check if the container is empty; usually for a stack in coordination with .top() or .pop()    
-
 - `unordered_set` - each element only once; duplicate elements, will be ignored.
-
-- `push_back()`
-  - Used with sequence containers like `std::vector` to add an element at the end.
-
-- `map`
-  - A collection of key-value pairs. Keys are unique, and each key maps to a single value.
- 
-- `unordered_map`
-  - Hash table implementation of a map which allows for fast access and insertion of key-value pairs. Useful for frequency counting and mapping relationships.
-
-- `pair`
-  - Useful for returning two values from a function or storing two related values together. Accessed via `.first` and `.second`.
+- `push_back()`- with sequence containers like `std::vector` to add an element at the end.
+- `map` - collection of key-value pairs. Keys are unique, and each key maps to a single value. 
+- `unordered_map` - Hash table implementation of a map which allows for fast access and insertion of key-value pairs. Useful for frequency counting and mapping relationships.
+- `pair` -  Useful for returning two values from a function or storing two related values together. Accessed via `.first` and `.second`.
 
 - `algorithm functions`
   - Includes `count`, `find()`, `reverse()`, `accumulate()`, `lower_bound()`, `upper_bound()`, and many more for common operations.
@@ -559,7 +577,9 @@ Bottom-Up Approach (Tabulation): In this approach, the solution is built startin
 - **Usage**: `std::string str = std::to_string(123);`
 - **Note**: Works with various numeric types (int, long, long long, float, double).
 
+- `string::npos` - a constant static member value with the greatest possible value for an element of type size_t. This value, when returned by string functions like find(), indicates that a substring or character was not found in the string.
 
+  
 --------
 # Resources
 - [Don’t Just LeetCode; Follow the Coding Patterns Instead](https://levelup.gitconnected.com/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb)
