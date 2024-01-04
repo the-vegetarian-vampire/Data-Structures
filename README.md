@@ -547,6 +547,11 @@ Top-Down Approach (Memoization): This approach involves writing the recursive so
 
 Bottom-Up Approach (Tabulation): In this approach, the solution is built starting with the simplest subproblems. By solving larger and larger subproblems using the results of previously solved subproblems, the final solution to the original problem is eventually reached. This approach typically involves filling up a table (array), and it is iterative.
 
+Lookup Tables (Precomputed Answers)
+* In this approach, you calculate and store answers for all possible inputs or a significant range of inputs before the actual execution of the main part of the program.
+* This is particularly useful when the range of inputs is limited and it's feasible to compute all possible answers ahead of time.
+* Example: Precomputing factorial values, Fibonacci numbers, or prime numbers within a certain range.
+
 ---------
 # Floyd-Warshall
 - used for finding the shortest paths between all pairs of vertices in a weighted graph. This graph can be either directed or undirected. One of the main advantages of the Floyd-Warshall algorithm is its ability to handle negative weights, as long as there are no negative weight cycles
