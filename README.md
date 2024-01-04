@@ -548,8 +548,18 @@ Top-Down Approach (Memoization): This approach involves writing the recursive so
 Bottom-Up Approach (Tabulation): In this approach, the solution is built starting with the simplest subproblems. By solving larger and larger subproblems using the results of previously solved subproblems, the final solution to the original problem is eventually reached. This approach typically involves filling up a table (array), and it is iterative.
 
 ---------
+# Floyd-Warshall
+- used for finding the shortest paths between all pairs of vertices in a weighted graph. This graph can be either directed or undirected. One of the main advantages of the Floyd-Warshall algorithm is its ability to handle negative weights, as long as there are no negative weight cycles
+
+
+-----------------
+
 # C++ STL Algorithmns in Action
 
+- `ios_base::sync_with_stdio(false)` - disables the synchronization between the C++ standard streams (std::cin, std::cout) and the C standard streams (stdin, stdout). Disabling this synchronization can lead to faster I/O operations, as the overhead of maintaining synchronization is removed.
+
+- `cin.tie(NULL)` - breaks the tie between std::cin (standard input stream) and std::cout (standard output stream). By default, std::cout is flushed (i.e., all pending output is written) before each I/O operation on std::cin to ensure that all output is displayed before new input is taken. By setting cin.tie(NULL), this automatic flushing is disabled, which can improve performance when frequent flushing is unnecessary.
+ 
 - `.size()` - used with containers like std::vector, std::list, etc. to get the number of elements.
 - `.length()` - used specifically with `std::string` to get the number of characters in the string. Identical in functionality to .size() when used with strings.    
 - `.empty()` - returns boolean to check if the container is empty; usually for a stack in coordination with .top() or .pop()    
