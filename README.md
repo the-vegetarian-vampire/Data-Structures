@@ -609,4 +609,4 @@ Lookup Tables (Precomputed Answers)
 - [Don’t Just LeetCode; Follow the Coding Patterns Instead](https://levelup.gitconnected.com/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb)
 - [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 - [Leetcode Strategy](https://www.youtube.com/watch?v=ZBmQlFeyEYI)
-   Prioritize stacks and queues
+-  Prioritize stacks and queues
