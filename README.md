@@ -19,7 +19,7 @@ Different terms for inputs
 
 ---
 
-### Some Terms
+### Key Terms
 
 `base case` - the condition under which the recursion stops, preventing infinite recursion; thus terminating; typically empty or one element  
 `pivot` - an element used as a reference point to partition a data set into two separate groups  
@@ -279,13 +279,22 @@ Shortest path from a given source vertex to every other vertex in a weighted gra
 # BFS (Breadth-First Search) and DFS (Depth-First Search)
 
 BFS is a graph traversal algorithm.
-- aka `Level Order Traversal`
+- aka `Level Order Traversal
 - starts at the root (or an arbitrary node in a graph) and explores all neighboring nodes at the present depth before moving to the nodes at the next depth level.
 
 ---
 
-# DFS (Depth-First Search)
+DFS (Depth-First Search)
 - Explores as far as possible along each branch before backtracking; starts at the root (or an arbitrary node) and explores as far as possible along each branch before backtracking.
+ * 	In-Order Traversal:
+    * Process: Visit the left subtree, the root node, and then the right subtree.
+    * Result: Produces a sorted sequence of node values for a binary search tree.
+* 		Pre-Order Traversal:
+    * Process: Visit the root node first, then the left subtree, and finally the right subtree.
+    * Result: Useful for creating a copy of the tree or prefix expression (Polish notation).
+* 		Post-Order Traversal:
+    * Process: Visit the left subtree, then the right subtree, and finally the root node.
+    * Result: Used in deleting the tree or postfix expression (Reverse Polish notation).
 
 ---
 
@@ -599,3 +608,5 @@ Lookup Tables (Precomputed Answers)
 # Resources
 - [Don’t Just LeetCode; Follow the Coding Patterns Instead](https://levelup.gitconnected.com/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb)
 - [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+- [Leetcode Strategy](https://www.youtube.com/watch?v=ZBmQlFeyEYI)
+   Prioritize stacks and queues
