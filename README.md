@@ -77,6 +77,7 @@ Singly Linked List
 - Floyd's cycle-finding algorithm (also known as the "tortoise and the hare" algorithm)
 
 Doubly Linked List
+- **Skip List**: A probabilistic data structure that allows fast search, insertion, and deletion operations. It effectively creates multiple layers on top of a linked list to facilitate faster access to the elements.
 
 ---
 
@@ -324,6 +325,12 @@ Hierarchical data structures composed of nodes connected by edges.
 - **AVL Tree**: A self-balancing binary search tree.
 - **Red-Black Tree**: Another self-balancing binary search tree.
 - **Heap**: A specialized tree-based data structure that satisfies the heap property.
+
+- ## Advanced Data Structures
+- **Segment Tree**: A tree data structure used for storing information about intervals, or segments. It allows querying which of the stored segments contain a given point. It is, particularly useful for static data when the segments do not change often.
+- **Fenwick Tree** (Binary Indexed Tree): A data structure that provides efficient methods for calculation and manipulation of the prefix sums of a table of values. It's particularly well-suited for cumulative frequency tables.
+- **Disjoint Set** (Union-Find): A data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets. It supports two useful operations: finding the set of an element, and uniting two sets.
+- **Trie** (Prefix Tree): A specialized tree used to handle associative data structures. It's a powerful tool for implementing dictionaries and performing prefix searches, especially useful for tasks like autocomplete.
 
 ## Operations
 
